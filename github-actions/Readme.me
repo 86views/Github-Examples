@@ -14,3 +14,8 @@ curl -X POST \
 -d '{"event_type": "webhook", "client_payload": {"key": "value"} }' \
 https://api.github.com/repos/{owner}/{repo}/dispatches
 ```
+
+
+Trigger event web hook with gh cl
+ gh api repos/86views/Github-Examples/dispatches   -f event_type=new-custom-event  
+  -F client_payload[env]=staging   -F client_payload[msg]="Hello webhook"
