@@ -1,9 +1,9 @@
-name: Webhook Event example
+name: Webhook Event Said Example
 
 on:
   repository_dispatch:
     types:
-      - new-custom-event   
+      - new-custom-event
 
 jobs:
   respond-to-dispatch:
