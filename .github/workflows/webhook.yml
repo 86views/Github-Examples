@@ -3,7 +3,7 @@ name: Webhook Event example
 on:
   repository_dispatch:
     types:
-      - my-custom-event # custom event type name
+      - my-custom-event   # <- unique event name, triggers only if API payload matches
 
 jobs:
   respond-to-dispatch:
@@ -16,4 +16,4 @@ jobs:
         run: |
           echo "Event name: $GITHUB_EVENT_NAME"
           echo "Event action: ${{ github.event.action }}"
-          echo "Client payload: ${{ toJson(github.event.client_payload) }}"
+          echo "Payload: ${{ toJson(github.event.client_payload) }}"
